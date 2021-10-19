@@ -309,35 +309,68 @@ span:nth-child(4) {
 
 /*##############  Task #6 Styles  ###############*/
 
+/* creating css variables for dynamic css animation */
+
+:root {
+ --distY: 190px;
+ --distX: -20px;
+ --deg: 275deg;
+ --dur: 2s;
+ --delay: 0s;
+ --ease: linear;
+}
+
 .treats {
+  display: flex;
   overflow: hidden;
   position: relative;
 }
 
 .treats img {
-  height: 80px;
+  height: 70px;
   width: auto;
+  animation: drop var(--dur) var(--delay) var(--ease) both;
 }
 
 @keyframes drop {
   0% {
-    transform: translate(20px, -200px) rotate(-20deg);
+    transform: translateY(-360%)
+               translateX(480%)
+               rotate(0deg)
   }
   100% {
-    transform: translate(20px, 110px) rotate(245deg);
+    transform: translateY(var(--distY))
+               translateX(var(--distX))
+               rotate(var(--deg))
   }
 }
 
 .candy01 {
-  animation: drop 0.3s linear 1.9s both;
+  --distY: 110%;
+  --distX: 95%;
+  --deg: 210deg;
+  --dur: 0.3s;
+  --delay: 3.2s;
+  --ease: cubic-bezier(.78,.57,.32,.93);
+  /* animation: drop 0.3s cubic-bezier(.78,.57,.32,.93) 1.9s both; */
 }
 
 .candy02 {
-  order: 1;
-  animation: drop 0.5s linear 2.1s both;
+  --distY:95%;
+  --distX:85%;
+  --deg:245deg;
+  --dur: 0.5s;
+  --delay: 4.1s;
+  --ease: cubic-bezier(.82,.42,.33,.84);
+  /* animation: drop 0.5s cubic-bezier(.82,.42,.33,.84) 2.1s both; */
 }
 
 .candy03 {
-  order: 2;
-  animation: drop 0.3s linear 4.2s both;
+  --distY:100%;
+  --distX:60%;
+  --deg:10deg;
+  --dur: 0.3s;
+  --delay: 6.2s;
+  --ease: cubic-bezier(.17,.49,.33,.84);
+  /* animation: drop 0.3s cubic-bezier(.17,.49,.33,.84) 4.2s both; */
 }

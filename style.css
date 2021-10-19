@@ -28,9 +28,9 @@ g) Task #4.5 Styles
 
 h) Task #4.6 Styles
 
+i) Task #2.2 Small Screens
+
 */
-
-
 
 /*##############  a) Global Styles  ###############*/
 
@@ -395,4 +395,68 @@ span:nth-child(4) {
   --delay: 6.2s;
   --ease: cubic-bezier(.17,.49,.33,.84);
   /* animation: drop 0.3s cubic-bezier(.17,.49,.33,.84) 4.2s both; */
+}
+
+/*##############  i) Task #2.2 Small Screens  ###############*/
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: olive;
+  }
+
+  :hover {
+    cursor: pointer;
+  }
+  
+  .grid-container {
+    background-color: white;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: minmax(480px, 1fr);
+    grid-template-rows: repeat(7, minmax(240px, 1fr));
+  }
+  
+  .grid-item {
+    padding: 10px;
+  }
+
+  .grid-item:nth-child(1) {
+    background-color: lightblue; /* visual cue only */
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .grid-item:nth-child(2) {
+    background-color: lightcyan; /* visual cue only */
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .grid-item:nth-child(3) {
+    background-color: lightsteelblue; /* visual cue only */
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .grid-item:nth-child(4) {
+    background-color: lightpink; /* visual cue only */
+    grid-column: 1;
+    grid-row: 4;
+  }
+  .grid-item:nth-child(5) {
+    /* bonus material */
+    background-color: orange; /* visual cue only */
+    grid-column: 1;
+    grid-row: 5;
+  }
+  .grid-item:nth-child(6) {
+    /* bonus material */
+    background-color: lightseagreen; /* visual cue only */
+    grid-column: 1;
+    grid-row: 6;
+  }
+  .grid-item:nth-child(7) {
+    /* bonus material */
+    background-color: lightyellow; /* visual cue only */
+    grid-column: 1;
+    grid-row: 7;
+  }
 }

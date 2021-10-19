@@ -87,5 +87,18 @@ button {
   font-size: 1.2em;
   font-weight: bold;
   text-align: center;
-  text-decoration: none;
+}
+
+button {
+  transition: background .4s ease-in,
+              border .3s .2s ease-in-out,
+              border-radius .25s .1s ease-in,
+              color .3s .3s linear;
+}
+
+button:hover {
+  background:green;
+  border: 3px solid lightgreen;
+  border-radius: 16px;
+  color: white;
 }

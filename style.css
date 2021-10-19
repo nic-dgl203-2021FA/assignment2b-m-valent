@@ -142,19 +142,20 @@ h3 {
 }
 
 @keyframes float {
-  100% {
-    transform: translateX(300%);
-  }
+  100% {transform: translateX(300%);}
 }
-
-@keyframes shrink {
-  100% {transform:scale(0.3);}
-  }
 
 #spooky {
   animation-name: float;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  animation-iteration-count:3;
+  animation-duration: 2s;
+  /* animation-fill-mode: forwards; */
+  animation-iteration-count:infinite;
+  animation-play-state: paused;
   animation-direction: alternate-reverse;
 }
+
+#spooky:hover {
+  animation-play-state: running;
+}
+
+/*##############  Task #4 Styles  ###############*/

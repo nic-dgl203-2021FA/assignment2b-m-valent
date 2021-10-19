@@ -35,3 +35,39 @@ body {
 .grid-item {
   padding: 10px;
 }
+
+.grid-item:nth-child(1){
+  background-color: lightblue;  /* visual cue only */
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.grid-item:nth-child(2){
+  background-color: lightcyan;  /* visual cue only */
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.grid-item:nth-child(3){
+  background-color: lightsteelblue;  /* visual cue only */
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+.grid-item:nth-child(4){
+  background-color: lightpink;  /* visual cue only */
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+}
+.grid-item:nth-child(5){   /* bonus material */
+  background-color: lightyellow;  /* visual cue only */
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+.grid-item:nth-child(6){   /* bonus material */
+  background-color: lightseagreen;  /* visual cue only */
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+.grid-item:nth-child(7){   /* bonus material */
+  background-color: lightgoldenrodyellow;  /* visual cue only */
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}

@@ -3,14 +3,36 @@
   Due Date:     Oct 19, 2021
 
   Filename:     style.css
-  LastUpdated:  Oct 18, 2021
+  LastUpdated:  Oct 19, 2021
   
   Class:        DGL 203 - Advanced CSS
   Instructor:   Megan Wilson
   Semester:     NIC 2021 Fall
   */
 
-/*##############  Global Styles  ###############*/
+/*##############  MENU  ###############
+
+a) Global Styles
+
+b) Task #4.1 Styles
+
+c) Task #4.2 Styles
+
+d) Task #4.3 Styles
+
+e) Task #5 Cloud Styles
+
+f) Task #4.4 Styles
+
+g) Task #4.5 Styles
+
+h) Task #4.6 Styles
+
+*/
+
+
+
+/*##############  a) Global Styles  ###############*/
 
 body {
   padding: 20px;
@@ -78,7 +100,7 @@ body {
   grid-row: 3 / 4;
 }
 
-/*##############  Task #1 Styles  ###############*/
+/*############## b) Task #4.1 Styles  ###############*/
 
 .button {
   display: flex;
@@ -107,7 +129,7 @@ button:hover {
   color: white;
 }
 
-/*##############  Task #2 Styles  ###############*/
+/*##############  c) Task #4.2 Styles  ###############*/
 
 .shrink {
   display: flex;
@@ -138,7 +160,7 @@ h3 {
   animation-fill-mode: both;
 }
 
-/*##############  Task #3 Styles  ###############*/
+/*##############  d) Task #4.3 Styles  ###############*/
 
 .ghost {
   display: flex;
@@ -170,7 +192,7 @@ h3 {
   animation-play-state: running;
 }
 
-/*##############  Cloud Styles  ###############*/
+/*##############  e) Task #5 Cloud Styles  ###############*/
 
 .clouds {
   overflow: hidden;
@@ -214,7 +236,7 @@ h3 {
   animation: puffy 34s linear infinite both;
 }
 
-/*##############  Task #4 Styles  ###############*/
+/*##############  f) Task #4.4 Styles  ###############*/
 
 .typewriter {
   display: flex;
@@ -257,7 +279,7 @@ h2 {
   }
 }
 
-/*##############  Task #5 Styles  ###############*/
+/*##############  g) Task #4.5 Styles  ###############*/
 
 .scary {
   align-items: center;
@@ -307,7 +329,7 @@ span:nth-child(4) {
   animation-delay: 4.8s, 7.5s;
 }
 
-/*##############  Task #6 Styles  ###############*/
+/*##############  h) Task #4.6 Styles  ###############*/
 
 /* creating css variables for dynamic css animation */
 

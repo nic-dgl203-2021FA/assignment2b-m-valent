@@ -163,9 +163,19 @@ h3 {
 
 /*##############  Task #4 Styles  ###############*/
 
+.clouds {
+  overflow: hidden;
+  position: relative;
+}
+
+.clouds img {
+  height: 60px;
+  width: auto;
+}
+
 @keyframes puffy {
   0% {
-    transform: translateX(-220px);
+    transform: translateX(-280px);
   }
   100% {
     transform: translateX(920px);
@@ -173,12 +183,14 @@ h3 {
 }
 
 .cloud01 {
-  animation: puffy 20s linear 3s infinite both;
+  margin-top: 12px;
+  animation: puffy 24s linear 4s infinite both;
 }
 
 .cloud02 {
+  margin-top: 72px;
   order: 1;
-  animation: puffy 25s linear infinite both;
+  animation: puffy 28s linear infinite both;
 }
 
 /*##############  Task #5 Styles  ###############*/

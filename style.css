@@ -28,7 +28,7 @@ body {
   background-color: white;
   max-width: 1000px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(200px , 1fr));
+  grid-template-columns: repeat(3, minmax(300px , 1fr));
   grid-template-rows: repeat(3, minmax(200px, 1fr));
 }
 
@@ -70,4 +70,22 @@ body {
   background-color: lightgoldenrodyellow;  /* visual cue only */
   grid-column: 3 / 4;
   grid-row: 3 / 4;
+}
+
+/*##############  Assignment Styles  ###############*/
+
+.button {
+  display: flex;
+}
+
+button {
+  border: 4px dashed black;
+  margin: auto;
+  padding: 12px 24px;
+  background: white;
+  width: 240px;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
 }

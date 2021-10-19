@@ -272,7 +272,6 @@ h4 {
 
   perspective: 2000px;
   transform-style: preserve-3d;
-
   /* forgot to add the lying down and flipping up look */
 }
 
@@ -306,4 +305,39 @@ span:nth-child(3) {
 }
 span:nth-child(4) {
   animation-delay: 4.8s, 7.5s;
+}
+
+/*##############  Task #6 Styles  ###############*/
+
+.treats {
+  overflow: hidden;
+  position: relative;
+}
+
+.treats img {
+  height: 80px;
+  width: auto;
+}
+
+@keyframes drop {
+  0% {
+    transform: translate(20px, -200px) rotate(-20deg);
+  }
+  100% {
+    transform: translate(20px, 110px) rotate(245deg);
+  }
+}
+
+.candy01 {
+  animation: drop 0.3s linear 1.9s both;
+}
+
+.candy02 {
+  order: 1;
+  animation: drop 0.5s linear 2.1s both;
+}
+
+.candy03 {
+  order: 2;
+  animation: drop 0.3s linear 4.2s both;
 }

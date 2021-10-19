@@ -163,6 +163,26 @@ h3 {
 
 /*##############  Task #4 Styles  ###############*/
 
+@keyframes puffy {
+  0% {
+    transform: translateX(-220px);
+  }
+  100% {
+    transform: translateX(920px);
+  }  
+}
+
+.cloud01 {
+  animation: puffy 20s linear 3s infinite both;
+}
+
+.cloud02 {
+  order: 1;
+  animation: puffy 25s linear infinite both;
+}
+
+/*##############  Task #5 Styles  ###############*/
+
 .typewriter {
   display: flex;
   justify-content: center;

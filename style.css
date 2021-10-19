@@ -31,7 +31,7 @@ body {
   background-color: white;
   max-width: 1000px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(300px , 1fr));
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
   grid-template-rows: repeat(3, minmax(200px, 1fr));
 }
 
@@ -39,38 +39,41 @@ body {
   padding: 10px;
 }
 
-.grid-item:nth-child(1){
-  background-color: lightblue;  /* visual cue only */
+.grid-item:nth-child(1) {
+  background-color: lightblue; /* visual cue only */
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
-.grid-item:nth-child(2){
-  background-color: lightcyan;  /* visual cue only */
+.grid-item:nth-child(2) {
+  background-color: lightcyan; /* visual cue only */
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 }
-.grid-item:nth-child(3){
-  background-color: lightsteelblue;  /* visual cue only */
+.grid-item:nth-child(3) {
+  background-color: lightsteelblue; /* visual cue only */
   grid-column: 3 / 4;
   grid-row: 1 / 2;
 }
-.grid-item:nth-child(4){
-  background-color: lightpink;  /* visual cue only */
+.grid-item:nth-child(4) {
+  background-color: lightpink; /* visual cue only */
   grid-column: 1 / 4;
   grid-row: 2 / 3;
 }
-.grid-item:nth-child(5){   /* bonus material */
-  background-color: orange;  /* visual cue only */
+.grid-item:nth-child(5) {
+  /* bonus material */
+  background-color: orange; /* visual cue only */
   grid-column: 1 / 2;
   grid-row: 3 / 4;
 }
-.grid-item:nth-child(6){   /* bonus material */
-  background-color: lightseagreen;  /* visual cue only */
+.grid-item:nth-child(6) {
+  /* bonus material */
+  background-color: lightseagreen; /* visual cue only */
   grid-column: 2 / 3;
   grid-row: 3 / 4;
 }
-.grid-item:nth-child(7){   /* bonus material */
-  background-color: lightyellow;  /* visual cue only */
+.grid-item:nth-child(7) {
+  /* bonus material */
+  background-color: lightyellow; /* visual cue only */
   grid-column: 3 / 4;
   grid-row: 3 / 4;
 }
@@ -93,14 +96,12 @@ button {
 }
 
 button {
-  transition: background .4s ease-in,
-              border .3s .2s ease-in-out,
-              border-radius .25s .1s ease-in,
-              color .3s .3s linear;
+  transition: background 0.4s ease-in, border 0.3s 0.2s ease-in-out,
+    border-radius 0.25s 0.1s ease-in, color 0.3s 0.3s linear;
 }
 
 button:hover {
-  background:green;
+  background: green;
   border: 3px solid lightgreen;
   border-radius: 16px;
   color: white;
@@ -114,9 +115,15 @@ button:hover {
 }
 
 @keyframes skrinkage {
-  0% {transform:scale(1.2);}
-  65% {transform:scale(0.7);}
-  100% {transform:scale(1);}
+  0% {
+    transform: scale(1.2);
+  }
+  65% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 h3 {
@@ -145,14 +152,16 @@ h3 {
 }
 
 @keyframes float {
-  100% {transform: translateX(300%);}
+  100% {
+    transform: translateX(300%);
+  }
 }
 
 #spooky {
   animation-name: float;
   animation-duration: 2s;
   /* animation-fill-mode: forwards; */
-  animation-iteration-count:infinite;
+  animation-iteration-count: infinite;
   animation-play-state: paused;
   animation-direction: alternate-reverse;
 }
@@ -161,7 +170,7 @@ h3 {
   animation-play-state: running;
 }
 
-/*##############  Task #4 Styles  ###############*/
+/*##############  Cloud Styles  ###############*/
 
 .clouds {
   overflow: hidden;
@@ -179,7 +188,7 @@ h3 {
   }
   100% {
     transform: translateX(980px);
-  }  
+  }
 }
 
 .cloud01 {
@@ -205,7 +214,7 @@ h3 {
   animation: puffy 34s linear infinite both;
 }
 
-/*##############  Task #5 Styles  ###############*/
+/*##############  Task #4 Styles  ###############*/
 
 .typewriter {
   display: flex;
@@ -217,22 +226,21 @@ h2 {
   font-size: 1.75rem;
   font-weight: bolder;
   color: black;
-  font-family: 'FreeMono', monospace;
-  overflow: hidden; 
-  border-right: .2em solid blueviolet; 
+  font-family: "FreeMono", monospace;
+  overflow: hidden;
+  border-right: 0.2em solid blueviolet;
 
-  white-space: nowrap; 
-  margin: 0 auto; 
-  letter-spacing: .1em; 
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.1em;
 }
 
 h2 {
-  animation: typing 3s 3s steps(16) both,
-             cursor 0.5s steps(1) infinite;
-  }
+  animation: typing 3s 3s steps(16) both, cursor 0.5s steps(1) infinite;
+}
 @keyframes typing {
   0% {
-    width:0px;
+    width: 0px;
   }
   100% {
     width: 100%;
@@ -240,10 +248,30 @@ h2 {
 }
 
 @keyframes cursor {
-  0%, 100% {
+  0%,
+  100% {
     border-color: transparent;
   }
   50% {
     border-color: blueviolet;
-    }
+  }
+}
+
+/*##############  Task #5 Styles  ###############*/
+
+.scary {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+h4 {
+  font-family: "FreeMono", monospace;
+  font-size: 3em;
+  font-weight: bolder;
+}
+
+span {
+  display: inline-block;
+  color: whitesmoke;
 }

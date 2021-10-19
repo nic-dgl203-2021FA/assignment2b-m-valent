@@ -21,7 +21,10 @@ body {
   background-color: lightgrey;
 
   /* using background for visual cues during setup, option to delete or alter upon completion */
+}
 
+:hover {
+  cursor: crosshair;
 }
 
 .grid-container {
@@ -57,7 +60,7 @@ body {
   grid-row: 2 / 3;
 }
 .grid-item:nth-child(5){   /* bonus material */
-  background-color: lightyellow;  /* visual cue only */
+  background-color: orange;  /* visual cue only */
   grid-column: 1 / 2;
   grid-row: 3 / 4;
 }
@@ -67,7 +70,7 @@ body {
   grid-row: 3 / 4;
 }
 .grid-item:nth-child(7){   /* bonus material */
-  background-color: lightgoldenrodyellow;  /* visual cue only */
+  background-color: lightyellow;  /* visual cue only */
   grid-column: 3 / 4;
   grid-row: 3 / 4;
 }
@@ -159,3 +162,44 @@ h3 {
 }
 
 /*##############  Task #4 Styles  ###############*/
+
+.typewriter {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  align-self: center;
+  font-size: 1.75rem;
+  font-weight: bolder;
+  color: black;
+  font-family: 'FreeMono', monospace;
+  overflow: hidden; 
+  border-right: .2em solid blueviolet; 
+
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: .1em; 
+}
+
+h2 {
+  animation: typing 3s 3s steps(16) both,
+             cursor 0.5s steps(1) infinite;
+  }
+@keyframes typing {
+  0% {
+    width:0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes cursor {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: blueviolet;
+    }
+}

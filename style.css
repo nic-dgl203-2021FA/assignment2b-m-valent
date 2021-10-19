@@ -175,22 +175,34 @@ h3 {
 
 @keyframes puffy {
   0% {
-    transform: translateX(-280px);
+    transform: translateX(-360px);
   }
   100% {
-    transform: translateX(920px);
+    transform: translateX(980px);
   }  
 }
 
 .cloud01 {
-  margin-top: 12px;
-  animation: puffy 24s linear 4s infinite both;
+  margin-top: 24px;
+  animation: puffy 26s linear 4s infinite both;
 }
 
 .cloud02 {
-  margin-top: 72px;
+  margin-top: 60px;
   order: 1;
   animation: puffy 28s linear infinite both;
+}
+
+.cloud03 {
+  margin-top: 6px;
+  order: 2;
+  animation: puffy 32s linear 6s infinite both;
+}
+
+.cloud04 {
+  margin-top: 96px;
+  order: 3;
+  animation: puffy 34s linear infinite both;
 }
 
 /*##############  Task #5 Styles  ###############*/

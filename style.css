@@ -3,7 +3,7 @@
   Due Date:     Oct 19, 2021
 
   Filename:     style.css
-  LastUpdated:  Oct 17, 2021
+  LastUpdated:  Oct 18, 2021
   
   Class:        DGL 203 - Advanced CSS
   Instructor:   Megan Wilson
@@ -13,5 +13,25 @@
 /*##############  Global Styles  ###############*/
 
 body {
-  margin-left: 30px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgrey;
+
+  /* using background for visual cues during setup, option to delete or alter upon completion */
+
+}
+
+.grid-container {
+  background-color: white;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px , 1fr));
+  grid-template-rows: repeat(3, minmax(200px, 1fr));
+}
+
+.grid-item {
+  padding: 10px;
 }

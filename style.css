@@ -267,8 +267,13 @@ h2 {
 
 h4 {
   font-family: "FreeMono", monospace;
-  font-size: 3em;
-  font-weight: bolder;
+  font-size: 5em;
+  font-weight: 900;
+
+  perspective: 2000px;
+  transform-style: preserve-3d;
+
+  /* forgot to add the lying down and flipping up look */
 }
 
 span {
@@ -282,24 +287,22 @@ span {
 }
 
 span {
-  animation: flipUp .5s cubic-bezier(.16,.85,.84,.29) 5.5s both;
+  animation: flipUp .5s cubic-bezier(.49,1.5,.84,.29) 4.8s both;
   transform-origin: 50% 70%;
 }
 
 span:nth-child(2) {
-  margin-right:0.15em;
-  animation-delay: 5.7s;
+  animation-delay: 5.0s;
 }
 
 span:nth-child(3) {
-  margin-right:0.15em;
-  animation-delay: 5.9s;
+  animation-delay: 5.2s;
 }
 
-span:nth-child(4) {
-  animation-delay: 6.1s;
+/* span:nth-child(4) {
+  animation-delay: 5.4s;
 }
 
 span:nth-child(5) {
-  animation-delay:6.3s;
-}
+  animation-delay:5.6s;
+} */

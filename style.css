@@ -23,29 +23,32 @@
 body {
   text-align: center;
   justify-content: center;
-  background-color: lightgrey;
+  background-color: green;
   /* using background for visual cues during setup, option to delete or alter upon completion */
 }
 
 .w3-container {
   margin: auto;
-  background-color: white;
+  background-color: lightgreen;
   width: 90%;
 }
 
 .course #ball{
-  offset-position: revert;
+  /* transform-origin: bottom; */
+  transform-box: fill-box;
   offset-path: path('M1 1c154.05 20.43 278.39 93.92 335 237 102-50.66 182.73-49.35 275 8 46.77-32.45 86.36-24.11 114 0 66.29-35.12 98.23-18.66 90 32');
-  animation: fly 2.5s ease-out both;
+   offset-position: bottom;
+  animation: fly 2.5s linear both;
+
 }
 
-#ball {
-  width: 20px;
-  height: 20px;
+#cup {
+  /* width: 20px;
+  height: 20px; */
   /* offset-position: left; */
   transform-origin: center;
   transform-box: fill-box;
-  animation: spin .5s linear both infinite;
+  animation: spin 1.5s linear both infinite;
 }
 
 #_18th_hole  {
@@ -58,7 +61,7 @@ body {
 
 @keyframes spin {
   0% {transform: rotate(0deg);}
-  100% {transform: rotate(720deg);}
+  100% {transform: rotate(360deg);}
 }
 
 @keyframes pickup {
@@ -72,10 +75,9 @@ body {
 
 @keyframes fly {
   0% {
-    offset-position: bottom 10px right 20px;
     offset-distance: 0%;
   }
-  to {
+  100% {
     offset-distance: 100%;
   }
   

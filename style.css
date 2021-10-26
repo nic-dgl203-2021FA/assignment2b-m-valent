@@ -31,29 +31,22 @@ body {
   width: 90%;
 }
 
-
-
 .course #ball {
   width: 24px;
   height: 24px;
-  transform-origin: 50% 50%;
+  transform-origin: center;;
   transform-box: fill-box;
   animation: spin 0.5s linear both infinite;
 }
 
 .course #ball {
-  transform-origin: 50% 50%;
   offset-path: path('M1 1c154.05 20.43 278.39 93.92 335 237 102-50.66 182.73-49.35 275 8 46.77-32.45 86.36-24.11 114 0 66.29-35.12 98.23-18.66 90 32');
   animation: fly 2.5s ease-out both;
 }
 
-.course #cup {
-  animation: pickup 2s ease-in-out both;
-}
 
-.course #_18th_hole {
-  /* position: relative; */
-  animation: pickup 2s ease-in-out both;
+#_18th_hole  {
+  animation: pickup .5 ease 2.5s both;
 }
 
 /*##############  Animations  ###############*/
@@ -64,10 +57,8 @@ body {
 }
 
 @keyframes pickup {
-  0% {transform-origin: 0px 0px};
-  25% {transform-origin: 0px 20px};
-  70% {transform-origin: 0px 40px};
-  100% {transform-origin: 0px 100px};
+  0% {transform: translateY(0);}
+  100% {transform: translateY(-100px);}
 }
 
 @keyframes fly {

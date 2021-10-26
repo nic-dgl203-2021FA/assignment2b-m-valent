@@ -37,7 +37,6 @@ body {
   /* transform-origin: bottom; */
   transform-box: fill-box;
   offset-path: path('M1 1c154.05 20.43 278.39 93.92 335 237 102-50.66 182.73-49.35 275 8 46.77-32.45 86.36-24.11 114 0 66.29-35.12 98.23-18.66 90 32');
-   offset-position: bottom;
   animation: fly 2.5s linear both;
 
 }
@@ -75,6 +74,9 @@ body {
 
 @keyframes fly {
   0% {
+    position: relative;
+    top: -180.14;
+    left: -156.5;
     offset-distance: 0%;
   }
   100% {

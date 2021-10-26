@@ -13,42 +13,46 @@
 
 /*##############  Global Styles  ###############*/
 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  /* display: flex;
-  flex-direction: column; */
-  /* justify-content: center; */
-  margin: 60px auto;
-  padding: 20px;
+  text-align: center;
   background-color: lightgrey;
   /* using background for visual cues during setup, option to delete or alter upon completion */
 }
 
-.grid-container-C {
+.container {
   background-color: white;
   width: 90%;
-  /* max-width: 1000px; */
-  /* max-height: 800px; */
-  grid-template-columns: minmax(800px, 1fr);
-  grid-template-rows: minmax(400px, 1fr);
 }
 
 
 
-#ball {
+.course #ball {
+  width: 24px;
+  height: 24px;
   transform-origin: 50% 50%;
   transform-box: fill-box;
-  animation: spin 1s linear both infinite;
-  offset-path: path('M1 1c154.05 20.43 278.39 93.92 335 237 102-50.66 182.73-49.35 275 8 46.77-32.45 86.36-24.11 114 0 66.29-35.12 98.23-18.66 90 32');
-  animation: fly 3.5s ease-out both;
+  animation: spin 0.5s linear both infinite;
 }
 
-/* #ball {
-offset-path: path('M1 1c154.05 20.43 278.39 93.92 335 237 102-50.66 182.73-49.35 275 8 46.77-32.45 86.36-24.11 114 0 66.29-35.12 98.23-18.66 90 32');
-  animation: fly 3.5s ease-out both;
-} */
+.course #ball {
+  transform-origin: 50% 50%;
+  offset-path: path('M1 1c154.05 20.43 278.39 93.92 335 237 102-50.66 182.73-49.35 275 8 46.77-32.45 86.36-24.11 114 0 66.29-35.12 98.23-18.66 90 32');
+  animation: fly 2.5s ease-out both;
+}
 
-#flag_pole {
-  position: relative;
+.course #cup {
+  animation: pickup 2s ease-in-out both;
+}
+
+.course #_18th_hole {
+  /* position: relative; */
   animation: pickup 2s ease-in-out both;
 }
 
@@ -56,14 +60,14 @@ offset-path: path('M1 1c154.05 20.43 278.39 93.92 335 237 102-50.66 182.73-49.35
 
 @keyframes spin {
   0% {transform: rotate(0deg);}
-  100% {transform: rotate(720deg);}
+  100% {transform: rotate(360deg);}
 }
 
 @keyframes pickup {
-  0% {left:0px; top:0px};
-  25% {left:-20px; top:-60px;};
-  70% {left:-35px; top:-100px;};
-  100% {left:-40px; top:-120px;};
+  0% {transform-origin: 0px 0px};
+  25% {transform-origin: 0px 20px};
+  70% {transform-origin: 0px 40px};
+  100% {transform-origin: 0px 100px};
 }
 
 @keyframes fly {

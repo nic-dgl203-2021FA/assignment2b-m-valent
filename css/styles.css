@@ -101,7 +101,7 @@ h3 {
 header {
   /* downloaded background image from http://wallpaperswide.com/above_the_clouds_4-wallpapers.html */
 
-  background-image: url(../images/dragon_fantasy_art-wallpaper-2400x1350.jpg);
+  background-image: url(../img/dragon_fantasy_art-wallpaper-2400x1350.jpg);
   background-size: cover;
   background-position: left;
   padding-bottom: 20px;
@@ -183,7 +183,7 @@ footer {
 
   /* downloaded background image from http://wallpaperswide.com/above_the_clouds_4-wallpapers.html */
 
-  background-image: url(../images/above_the_clouds_4-wallpaper-2560x1440.jpg);
+  background-image: url(../img/above_the_clouds_4-wallpaper-2560x1440.jpg);
   background-size: cover;
   background-position: center;
   padding-bottom: 100px;

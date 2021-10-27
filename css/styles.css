@@ -1,0 +1,245 @@
+/*
+Student:      Misko Valent
+Date:         Sept 16, 2021
+
+Filename:     styles.css
+LastUpdated:  Oct 05, 2021
+  
+Class:        DGL 203 - Advanced CSS
+Instructor:   Megan Wilson
+Semester:     NIC 2021 Fall
+
+Color Palette
+https://coolors.co/e63946-f1faee-a8dadc-457b9d-1d3557
+
+--imperial-red: #e63946ff;
+--honeydew: #f1faeeff;
+--powder-blue: #a8dadcff;
+--celadon-blue: #457b9dff;
+--prussian-blue: #1d3557ff;
+*/
+
+/* Global Styles
+=========================================*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #1d3557ff;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  line-height: 1.25;
+}
+
+img {
+  width: 300px;
+}
+
+a {
+  color: #e63946ff;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h1,
+h2 {
+  font-family: "Comfortaa", cursive;
+  margin: 0;
+}
+
+.content-wrap {
+  max-width: 800px;
+  width: 85%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+h3 {
+  margin-bottom: 10px;
+}
+
+.item-details h3 {
+  color: #a8dadcff;
+}
+
+.item-details h3 + p {
+  font-style: italic;
+}
+
+.item-details h3 ~ p {
+  margin-bottom: 8px;
+}
+
+.divider > section {
+  border-bottom: 1px dashed #457b9dff;
+  padding: 25px 0;
+}
+.divider > section:last-of-type {
+  border-style: none;
+}
+
+/* Profile
+=========================================*/
+header {
+  /* downloaded background image from http://wallpaperswide.com/above_the_clouds_4-wallpapers.html */
+
+  background-image: url(../images/dragon_fantasy_art-wallpaper-2400x1350.jpg);
+  background-size: cover;
+  background-position: left;
+  padding-bottom: 20px;
+  color: #f1faeeff;
+}
+
+/* Projects
+=========================================*/
+.projects {
+  background: #457b9dff;
+  color: #f1faeeff;
+}
+.projects a {
+  color: #1d3557ff;
+  font-weight: bold;
+}
+
+.projects .btn {
+  color: #1d3557ff;
+  background: #f1faeeff;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.projects .btn:hover {
+  background: rgba(29, 53, 87, 60%);
+  color: #f1faeeff;
+}
+
+.project-item {
+  overflow: hidden;
+}
+
+.project-item h3 {
+  margin-top: 0;
+}
+
+.project-item img {
+  border-radius: 8px;
+}
+
+.boxed_img {
+  display: block;
+  margin-left: 12.5%;
+  width: 75%;
+  border-radius: 8px;
+  padding-bottom: 20px;
+}
+.modal_title {
+  color: goldenrod;
+}
+
+/* Work Experience
+=========================================*/
+.work-experience {
+  background: #a8dadcff;
+}
+.job-item h3 {
+  color: #1d3557ff;
+}
+
+/* Education
+=========================================*/
+.education {
+  background: #1d3557ff;
+  color: #f1faeeff;
+}
+
+.education p {
+  width: 75%;
+}
+
+/* Contact Info
+=========================================*/
+footer {
+  background: #f1faeeff; /* providing color while background image loads */
+  color: #457b9dff;
+
+  /* downloaded background image from http://wallpaperswide.com/above_the_clouds_4-wallpapers.html */
+
+  background-image: url(../images/above_the_clouds_4-wallpaper-2560x1440.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 100px;
+}
+
+.contact-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-list a {
+  color: #1d3557ff;
+  font-weight: bold;
+  padding: 15px;
+  display: inline-block;
+}
+
+/* Responsive
+=========================================*/
+
+@media screen and (min-width: 750px) {
+  header,
+  footer {
+    text-align: center;
+  }
+
+  .project-item img {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .job-item {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap: 20px;
+  }
+  .contact-list {
+    display: flex;
+    justify-content: center;
+  }
+
+  .projects li {
+    margin-left: 320px;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  h1 {
+    font-size: 54px;
+    line-height: 1;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  .contact-list a {
+    padding: 5px;
+  }
+}

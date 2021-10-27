@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--
+  Student:      Misko Valent
+  Date:         Sept 16, 2021
+
+  Filename:     index.html
+  LastUpdated:  Oct 05, 2021
+  
+  Class:        DGL 203 - Advanced CSS
+  Instructor:   Megan Wilson
+  Semester:     NIC 2021 Fall
+  -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Misko Valent - Digital Resume</title>
+
+    <!-- loading from Google Fonts of styles used on this site -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- linked w3schools stylesheets -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
+    <!-- linked my style sheet to this html page to override w3schools sheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+
+    <!-- copied code from w3school.com at https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_navbar_hide
+to help me provide a responsive navigation bar when viewed on mobile device -->
+
+<div class="w3-bar w3-blue-grey w3-top">
+  <a href="#home" class="w3-bar-item w3-button">Home</a>
+  <a href="#projects" class="w3-bar-item w3-button w3-hide-small">Projects</a>
+  <a href="#experience" class="w3-bar-item w3-button w3-hide-small">Experience</a>
+  <a href="#education" class="w3-bar-item w3-button w3-hide-small">Education</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small">Contact</a>
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+</div>
+
+<div id="demo" class="w3-bar-block w3-blue-grey w3-hide w3-hide-large w3-hide-medium">
+  <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+  <a href="#experience" class="w3-bar-item w3-button">Experience</a>
+  <a href="#education" class="w3-bar-item w3-button">Education</a>
+  <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+</div>
+
+    <main>
+      <!-- ***********************  ABOUT / PROFILE  *********************** -->
+      <header id="home">
+        <div class="content-wrap">
+          <h1>Misko Valent</h1>
+          <h2>Digital Media Designer</h2>
+
+          <p>
+            In the Spring of 2019 I started my journey toward an Advanced Design
+            and Development Diploma at North Island College. Currently in my
+            last year and am excited to present my accomplishments thus far.
+          </p>
+          <p>
+            It is my desire to find employment, furthering my skills while
+            providing team support and great contributions from my wealth of
+            design inspirations.
+          </p>
+          <p>
+            I have many transferable skills from numerous experiences, all have
+            customer service and dealing with people at its core. I work well in
+            teams or on my own, proven problem solver, proactive minded,
+            initiative taking, friendly demeanour; someone that goes above and
+            beyond for the employer and their clients.
+          </p>
+        </div>
+      </header>
+
+      <!-- ********************  PROJECTS / PORTFOLIO  ********************* -->
+      <section class="projects" id="projects">
+        <div class="content-wrap divider">
+          <h2>Featured Projects</h2>
+
+          <p>
+            Below is a summery of my projects, if interested in a more in-depth
+            look, I invite you to check out my InVision profile...
+            <a
+              href="https://projects.invisionapp.com/d/main?origin=v7#/projects"
+              target="_blank"
+              >InVision Profile</a
+            >
+          </p>
+
+          <!-- Copy the whole <section> block to add more projects. -->
+          <section class="w3-container project-item">
+            <img
+              src="images/projects/IMG-102-Action-Not-Words.png"
+              alt="Project 1 Action Not Words by Misko Valent"
+            />
+            <h3>"Action Not Words"</h3>
+            <p>
+              Using Adobe Illustrator, this was my very first project, zero
+              knowledge prior to starting this. We were asked to create a poster
+              based on a mock customer with following guidelines:
+            </p>
+
+            <ul>
+              <li>All in it together...</li>
+              <li>Environmental conscious...</li>
+              <li>Rebuilding the future...</li>
+              <li>Three colours max...</li>
+            </ul>
+
+            <a
+              class="btn"
+              onclick="document.getElementById('id01').style.display='block'"
+              href="#"
+              >View Project</a
+            >
+            <!-- modified found Modal code https://www.w3schools.com/w3css/w3css_modal.asp -->
+
+            <div id="id01" class="w3-modal w3-animate-opacity">
+              <div class="w3-modal-content w3-card-4">
+                <header class="w3-container w3-light-grey">
+                  <span
+                    onclick="document.getElementById('id01').style.display='none'"
+                    class="w3-button w3-large w3-display-topright"
+                    >&times;</span
+                  >
+                  <h2 class="modal_title">Action Not Words</h2>
+                </header>
+                <div class="w3-container">
+                  <p>
+                    <img
+                      class="boxed_img"
+                      src="images/projects/IMG-102-Action-Not-Words.png"
+                      alt="Project 1 Action Not Words by Misko Valent"
+                    />
+                  </p>
+                </div>
+                <footer class="w3-container w3-light-grey">
+                  <p>by Misko Valent</p>
+                </footer>
+              </div>
+            </div>
+          </section>
+
+          <section class="project-item">
+            <img
+              src="images/projects/IMG-103-Fantastic-Voyage_thumnail.png"
+              alt="Project 2 Fantastic Voyage by Misko Valent"
+            />
+            <h3>"Fantastic Voyage"</h3>
+            <p>
+              This time using Adobe Photoshop, we were tasked to create a
+              collage of at least five different images. I must admit I really
+              enjoyed all the options and tools at my disposal. Our guidelines
+              for this project were:
+            </p>
+
+            <ul>
+              <li>Non Destructive with original images...</li>
+              <li>Seperate layer for each ajustment...</li>
+              <li>Croping, masking, & bending...</li>
+              <li>Full page had to be used...</li>
+            </ul>
+
+            <a
+              class="btn"
+              onclick="document.getElementById('id02').style.display='block'"
+              href="#"
+              >View Project</a
+            >
+            <!-- modified found Modal code https://www.w3schools.com/w3css/w3css_modal.asp -->
+
+            <div id="id02" class="w3-modal w3-animate-opacity">
+              <div class="w3-modal-content w3-card-4">
+                <header class="w3-container w3-light-grey">
+                  <span
+                    onclick="document.getElementById('id02').style.display='none'"
+                    class="w3-button w3-large w3-display-topright"
+                    >&times;</span
+                  >
+                  <h2 class="modal_title">Fantastic Voyage</h2>
+                </header>
+                <div class="w3-container">
+                  <p>
+                    <img
+                      class="boxed_img"
+                      src="images/projects/IMG-103-Fantastic-Voyage.png"
+                      alt="Project 2 Fantastic Voyage by Misko Valent"
+                    />
+                  </p>
+                </div>
+                <footer class="w3-container w3-light-grey">
+                  <p>by Misko Valent</p>
+                </footer>
+              </div>
+            </div>
+          </section>
+
+          <section class="project-item">
+            <img
+              src="images/projects/IMG-112_Magazine-Cover.png"
+              alt="Project 3 DJ Galaxy Cover by Misko Valent"
+            />
+            <h3>"DJ Galaxy Magazine Cover"</h3>
+            <p>
+              In this class we focused on Typography, how to correctly use it,
+              to appreciate its design; avoiding bad fonts and families. This
+              project we were to design a magazine cover. We were tasked with
+              these guidelines:
+            </p>
+
+            <ul>
+              <li>Full page cover image...</li>
+              <li>Title, tagline, and supporting images...</li>
+              <li>Three feature articles minimum...</li>
+              <li>Three font-families max...</li>
+            </ul>
+
+            <a
+              class="btn"
+              onclick="document.getElementById('id03').style.display='block'"
+              href="#"
+              >View Project</a
+            >
+            <!-- modified found Modal code https://www.w3schools.com/w3css/w3css_modal.asp -->
+
+            <div id="id03" class="w3-modal w3-animate-opacity">
+              <div class="w3-modal-content w3-card-4">
+                <header class="w3-container w3-light-grey">
+                  <span
+                    onclick="document.getElementById('id03').style.display='none'"
+                    class="w3-button w3-large w3-display-topright"
+                    >&times;</span
+                  >
+                  <h2 class="modal_title">DJ Galaxy Magazine Cover</h2>
+                </header>
+                <div class="w3-container">
+                  <p>
+                    <img
+                      class="boxed_img"
+                      src="images/projects/IMG-112_Magazine-Cover.png"
+                      alt="Project 3 DJ Galaxy Cover by Misko Valent"
+                    />
+                  </p>
+                </div>
+                <footer class="w3-container w3-light-grey">
+                  <p>by Misko Valent</p>
+                </footer>
+              </div>
+            </div>
+          </section>
+
+          <section class="project-item">
+            <img
+              src="images/projects/IMG-111-Grub-Hunter-Mobile-App.jpg"
+              alt="Project 4 Mobile App by Misko Valent"
+            />
+            <h3>"Grub Hunter Mobile App / Commercial"</h3>
+            <p>
+              In my second year, I combined two class projects into one. Using
+              Adobe XD we were to design a proto type mobile app. I choose to
+              build an App that would help locate travelling food trucks. In my
+              audio & video class we were tasked to create a video. My idea was
+              to make a short commercial for the food truck App I was working
+              on. I was very happy with the results, many technics went into the
+              final product.
+            </p>
+
+            <p>
+              Some of the programs & applications used in the production were:
+            </p>
+
+            <ul>
+              <li>Adobe Illustrator & Photoshop...</li>
+              <li>Adobe InDesign & XD...</li>
+              <li>Adobe Lightroom Classic...</li>
+              <li>Adobe Premiere Pro, Audition, & After Effects...</li>
+            </ul>
+
+            <a
+              class="btn"
+              onclick="document.getElementById('id04').style.display='block'"
+              href="#"
+              >View Project</a
+            >
+            <!-- modified found Modal code https://www.w3schools.com/w3css/w3css_modal.asp -->
+
+            <div id="id04" class="w3-modal w3-animate-opacity">
+              <div class="w3-modal-content w3-card-4">
+                <header class="w3-container w3-light-grey">
+                  <span
+                    onclick="document.getElementById('id04').style.display='none'"
+                    class="w3-button w3-large w3-display-topright"
+                    >&times;</span
+                  >
+                  <h2 class="modal_title">Mobile App Commercial</h2>
+                </header>
+                <div class="w3-container">
+                  <div>
+                    <center>
+                   <iframe
+                      width="560px"
+                      height="315px"
+                      src="https://www.youtube.com/embed/GX6Cg093sZA"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen
+                    ></iframe>
+                  </center>
+                  </div>
+                </div>
+                <footer class="w3-container w3-light-grey">
+                  <p>by Misko Valent</p>
+                </footer>
+              </div>
+            </div>
+          </section>
+
+          <!-- End of Project block. -->
+        </div>
+      </section>
+
+      <!-- ***********************  WORK EXPERIENCE  *********************** -->
+      <section class="work-experience" id="experience">
+        <div class="content-wrap item-details divider">
+          <h2>Work Experience</h2>
+          <p>
+            The truth is I do not have much direct digital design work related experience.  Listed Below
+            are my last 5 jobs that I have had.  What is not immediately evident, is my ability working in teams or individually, thinking
+            outside the box, great problem solving, meticulous work standards, and desire to exceed all expectations.
+          </p>
+
+          <!-- Copy this whole <section> block to add more jobs. -->
+          <!-- JOB 1 -->
+          <section class="job-item">
+            <div class="job-details">
+              <h3>Feed System Technician</h3>
+              <p>AKVA Group Canada</p>
+              <p>Jul-Dec 2018</p>
+            </div>
+            <div class="job-summary">
+              <p>Installed Fish Feed systems on site for various fish farm
+                companies all over the Coastal Vancouver Island area. Maintained Installed
+              Fish Feed systems when service calls were required.  Construct systems on new 
+            barges for fish farm companies.</p>
+             
+            </div>
+          </section>
+
+          <!-- JOB 2 -->
+          <section class="job-item">
+            <div class="job-details">
+              <h3>Rigging & Gaffer / Lightning Tech</h3>
+              <p>Chesapeake Shores S3 Production Inc.</p>
+              <p>April 2018</p>
+            </div>
+            <div class="job-summary">
+              <p>Worked with Lead Gaffer and Lead Rigging Gaffer setting up set in studio
+                for filming episode 5 of season 3.  Team environment, long hours, multiple
+                tasks and responsibilities.  Many hours in the lift organizing the ceiling
+                electrical wire distribution system.
+              </p>              
+            </div>
+          </section>
+
+          <!-- JOB 3 -->
+          <section class="job-item">
+            <div class="job-details">
+              <h3>Construction Electrician Apprentice</h3>
+              <p>Apple Electric Ltd.</p>
+              <p>Feb-Nov 2016</p>
+            </div>
+            <div class="job-summary">
+              <p>Installed VAV controllers for Honeywell; plan layout, pull wire to units,
+                terminate wires to controller, quality control assurances. 	Team Lead of two
+                J-man and four apprentices; responsible for planning and organizing work to
+                meet safety standards while upholding efficiency and deadlines. 	Communicate
+                with project foreman on progress and potential issues; report daily tasks,
+                inventory stock, employee performance, and construction hazards.
+              </p>
+            </div>
+          </section>
+
+          <!-- JOB 4 -->
+          <section class="job-item">
+            <div class="job-details">
+              <h3>Security Electronics Tech</h3>
+              <p>Safety Net Security</p>
+              <p>Jul-Dec 2015</p>
+            </div>
+            <div class="job-summary">
+              <p>Troubleshoot and repair electrical installs, make appropriate technical modifications,
+                monitor systems to ensure they are working correctly. Build, develop, and foster strong
+                working relationships with clients. Maintain documentation and record account updates and
+                changes.Stay current on new technology; train end users on system functionality.
+              </p>
+            </div>
+          </section>
+
+          <!-- JOB 5 -->
+          <section class="job-item">
+            <div class="job-details">
+              <h3>Elect Tech Level II</h3>
+              <p>Sanjel Corporation</p>
+              <p>Jun 2014 - Mar 2015</p>
+            </div>
+            <div class="job-summary">
+              <p>Perform maintenance in the district facilities and on location as required. Troubleshoot electrical /
+                electronic equipment using schematics. Configure various data acquisition / PLC based systems and
+                instrumentation (pressure, flow, density, and temperature). Perform calculations to determine calibration
+                factors for various sensors. Install and commission Electrical / Electronic / Hydraulic / Pneumatic controls
+                and systems on various equipment.
+              </p>
+            </div>
+          </section>
+
+      <!-- End of Job block. -->
+        </div>
+      </section>
+
+      <!-- ******************  EDUCATION & CERTIFICATIONS ****************** -->
+      <section class="education" id="education">
+        <div class="content-wrap item-details">
+          <h2>Education</h2>
+
+          <!-- Copy this whole <section> block to add more schools. -->
+            <section>
+              <h3>North Island College - Comox, BC</h3>
+              <p>Communication Design Diploma, 2021-22</p>
+              <p>GConnect with an audience by creating visual solutions to communication goals. Explore principles of communication
+                design and critical skills in web programming. Pursue careers in communication and graphic design, front-end web design
+                and development, user experience design and more.</p>
+            </section>
+
+          <section>
+            <h3>North Island College - Comox, BC</h3>
+            <p>Web Design Fundamentals Certificate, 2019-20</p>
+            <p>Gain foundational web technology skills. Understand key communication design principles and web-based standards.
+              Produce attractive, intuitive web pages that connect with their audiences.</p>
+          </section>
+
+          <section>
+            <h3>North Island College - Campbell River, BC</h3>
+            <p>Film and Television Training Lighting Film Program, 2017</p>
+            <p>
+              <ul>
+              <li>Motion Picture Industry Orientation</li>
+              <li>Safety Awareness (Act Safe)</li>
+              <li>Aerial Lift Training</li>
+              <li>Fall Protection</li>
+              <li>Occupational First Aid Level 1</li>
+              <li>WHMIS</li>
+              <li>Basic Security Training</li>
+              <li>Food Safe Level 1 / Serving It Right</li>
+              <li>Class 5 Driver’s License with Air Brakes</li>
+            </ul>
+          </p>
+          </section>
+
+          <section>
+            <h3>North Island College - Campbell River, BC</h3>
+            <p>Industrial Automation Technician Diploma, 2013-14</p>
+            <p>Learn to work on all types of electronic systems including motor controls and programmable logic controllers,
+              data acquisition, process control systems and robotics.</p>
+          </section>
+
+          <section>
+            <h3>North Island College - Campbell River, BC</h3>
+            <p>Electronics Technician Core Certificate, 2012-13</p>
+            <p>Take the first step toward an exciting career in industrial electrical and automation. Learn to troubleshoot,
+              maintain and build electronic circuits including microprocessors and robotics equipment.</p>
+          </section>
+
+          <!-- End of School block. -->
+        </div>
+      </section>
+
+      <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** -->
+      <footer>
+        <div class="content-wrap" id="contact">
+          <h2>Let's Keep in Touch!</h2>
+
+          <!-- Social media and contact links. Add or remove any networks. -->
+          <ul class="contact-list">
+            <li><a href="mailto:party@miskodjs.ca">E-mail</a></li>
+            <li>
+              <a href="https://www.miskodjs.ca/" target="_blank"
+                >Website</a
+              >
+            </li>
+            <li><a href="https://www.instagram.com/miskodjs/" target="_blank">Instagram</a></li>
+            <li><a href="https://projects.invisionapp.com/d/main?origin=v7#/projects" target="_blank">InVision</a></li>
+            <li><a href="https://www.facebook.com/MiskoDJs" target="_blank">Facebook</a></li>
+          </ul>
+        </div>
+      </footer>
+    </main>
+
+<!-- copied code from w3school.com at https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_navbar_hide
+to help me provide a responsive navigation bar when viewed on mobile device -->
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("demo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else { 
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+      </script>
+
+  </body>
+</html>

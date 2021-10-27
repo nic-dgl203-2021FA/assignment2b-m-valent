@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
- <!--
+  <!--
   Student:      Misko Valent
   Assignment:   2C - Part 2: Navbar
   Due Date:     Oct 26, 2021
@@ -14,41 +13,76 @@
   Semester:     NIC 2021 Fall
   -->
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment 2C - Part Two</title>
 
-        <!-- linked w3schools stylesheets for most basic format style -->
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <!-- linked w3schools stylesheets for most basic format style -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 
-        <!-- linked animate.css stylesheets for some basic animations -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    
-        <link rel="stylesheet" href="NAVstyle.css" />
+    <!-- linked animate.css stylesheets for some basic animations -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
-        <!-- <link rel="stylesheet" href="style.css" /> -->
+    <!-- <link rel="stylesheet" href="NAVstyle.css" /> -->
 
-        <!-- <link rel="stylesheet" href="CodePen.css" /> -->
-</head>
-<body>
-  <nav class="w3-container w3-black">
-    <!-- copied original sample from CodePen "Flexbox Nav with Brand Logo" by Malthe -->
-    <div class="flex-container">
-      <a href="assign1C.html">
-        <img
-          src="img/1x/Misko_yellow.png"
-          style="height: 32px"
-          alt="Misko Valent media resume."
-        />
-      </a>
-      <ul class="navigation">
-        <li><a href="assign2B.html">Motion Samples</a></li>
-        <li><a href="assign2C.html">Animation</a></li>
-      </ul>
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+
+    <!-- <link rel="stylesheet" href="CodePen.css" /> -->
+
+    <link rel="stylesheet" href="css/ALLstyles.css" />
+
+
+  </head>
+  <body>
+    <!-- Sidebar -->
+        <!-- copied from w3schools examples https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_sidebar_overall -->
+    <div class="w3-sidebar w3-bar-block" style="display: none" id="mySidebar">
+      <button onclick="w3_close()" class="w3-bar-item w3-button w3-large">
+        Close &times;
+      </button>
+      <a href="assign1C.html" class="w3-bar-item w3-button">Resume</a>
+      <a href="assign2B.html" class="w3-bar-item w3-button">Motion Samples</a>
+      <a href="assign2C.html" class="w3-bar-item w3-button">Animation</a>
     </div>
-  </nav>
-    
-</body>
+
+    <nav class="w3-container w3-black">
+      <!-- copied original sample from CodePen "Flexbox Nav with Brand Logo" by Malthe -->
+      <div class="flex-container">
+        <a href="assign1C.html">
+          <img
+            src="img/1x/Misko_yellow.png"
+            style="height: 32px"
+            alt="Misko Valent media resume."
+          />
+        </a>
+        <ul class="navigation">
+          <li><a href="assign2B.html">Motion Samples</a></li>
+          <li><a href="assign2C.html">Animation</a></li>
+        </ul>
+
+        <button class="w3-button w3-black w3-xlarge" onclick="w3_open()">
+          ☰
+        </button>
+      </div>
+    </nav>
+
+    <!-- copied from w3schools examples https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_sidebar_overall -->
+    <!-- code below allows the hamburger menu to cover page -->
+
+    <script>
+      function w3_open() {
+        document.getElementById("mySidebar").style.width = "100%";
+        document.getElementById("mySidebar").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
+  </body>
 </html>

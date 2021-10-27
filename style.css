@@ -1,18 +1,20 @@
 /*
   Student:      Misko Valent
-  Assignment:   2C
+  Assignment:   2C - Part One - Animation
   Due Date:     Oct 26, 2021
 
   Filename:     style.css
-  LastUpdated:  Oct 25, 2021
+  LastUpdated:  Oct 26, 2021
   
   Class:        DGL 203 - Advanced CSS
   Instructor:   Megan Wilson
   Semester:     NIC 2021 Fall
   */
 
-/*##############  Global Styles  ###############*/
+/*##############  Assignment 2C - Part 01 - Styles  ###############*/
 
+:root {
+}
 
 * {
   margin: 0;
@@ -27,16 +29,49 @@ body {
   /* using background for visual cues during setup, option to delete or alter upon completion */
 }
 
+.partOneTitle {
+  font-weight: 900;
+}
+
+.fontA {
+  animation: fontVars var(--dur) var(--ease) both infinite;
+  /* animation: fontVars 3s infinite ease-out; */
+}
+
+.lineA {
+  --fontX: -40px;
+  --fontS: 1.6;
+  --fontW: 900;
+  --dur: 3.5s;
+  --ease: ease-out;
+}
+
+.fontB {
+  animation: fontVars var(--dur) var(--ease) both infinite;
+  /* animation: fontVars 2s infinite ease-in;  */
+}
+
+.lineB {
+  --fontX: 60px;
+  --fontS: 1.4;
+  --fontW: 900;
+  --dur: 2.5s;
+  --ease: ease-in;
+}
+
+
 .w3-container {
   margin: auto;
   background-color: lightgreen;
   width: 90%;
 }
 
-.course #ball{
+.course #ball {
   /* transform-origin: bottom; */
   transform-box: fill-box;
-  offset-path: path('M1 1c154.05 20.43 278.39 93.92 335 237 102-50.66 182.73-49.35 275 8 46.77-32.45 86.36-24.11 114 0 66.29-35.12 98.23-18.66 90 32');
+  offset-path: path(
+    "M1 1c154.05 20.43 278.39 93.92 335 237 102-50.66 182.73-49.35 275 8 46.77-32.45 86.36-24.11 114 0 66.29-35.12 98.23-18.66 90 32"
+  );
   animation: fly 2.5s linear both;
 }
 
@@ -49,7 +84,7 @@ body {
   animation: spin 1.5s linear both infinite;
 }
 
-#_18th_hole  {
+#_18th_hole {
   transform-origin: bottom;
   transform-box: fill-box;
   animation: pickup 0.3s ease-out 1.5s both;
@@ -58,8 +93,12 @@ body {
 /*##############  Animations  ###############*/
 
 @keyframes spin {
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(360deg);}
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes pickup {
@@ -78,5 +117,25 @@ body {
   100% {
     offset-distance: 100%;
   }
-  
+}
+
+@keyframes fontVars {
+  0%,
+  100% {
+    transform: scale(1) translateX(0);
+    font-weight: 300;
+  }
+  50% {
+    transform: translateX(var(--fontX)) scale(var(--fontS));
+    font-weight: (var(--fontW));
+  }
+}
+
+:root {
+  --fontX: 0;
+  --fontS: 1;
+  --fontW: 300;
+  --dur: 2s;
+  --delay: 0s;
+  --ease: linear;
 }

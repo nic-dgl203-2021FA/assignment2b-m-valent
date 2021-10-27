@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      href="images/brand/favicon.png"
+      type="image/x-icon"
+    />
+
+    <link href="css/jumbotron.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/6657278da7.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" type="text/css" href="css/miskodjs-styles.css" />
+
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!-- START navbar section -->
+    <header>
+      <nav
+        id="navbar-site"
+        class="navbar navbar-dark bg-dark navbar-expand-md fixed-top"
+      >
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="img/1x/Misko_light.png"
+              style="height: 30px"
+              alt="MiskoDJs mobile DJ service"
+            />
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#myTogglerNav"
+            aria-controls="myTogglerNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="myTogglerNav">
+            <div class="navbar-nav p-1 ml-auto">
+              <a class="nav-item nav-link" href="#home">Home</a>
+              <a class="nav-item nav-link" href="#services">Services</a>
+
+              <a class="nav-item nav-link" href="#about">About Us</a>
+              <a class="nav-item nav-link" href="#faq">FAQ</a>
+              <a class="nav-item nav-link" href="#contact">Contact Us</a>
+            </div>
+            <!-- navbar-nav -->
+          </div>
+          <!-- navbar collapse -->
+        </div>
+        <!-- navbar container -->
+      </nav>
+    </header>
+    <!-- END navbar section -->
+
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      $(function () {
+        var topoffset = 70; //variable for menu height
+
+        //Use smooth scrolling when clicking on navigation
+        $(".navbar-nav a").click(function () {
+          if (
+            location.pathname.replace(/^\//, "") ===
+              this.pathname.replace(/^\//, "") &&
+            location.hostname === this.hostname
+          ) {
+            var target = $(this.hash);
+            target = target.length
+              ? target
+              : $("[name=" + this.hash.slice(1) + "]");
+            if (target.length) {
+              $("html,body").animate(
+                {
+                  scrollTop: target.offset().top - topoffset,
+                },
+                1000
+              );
+              return false;
+            } //target.length
+          } //click function
+        }); //smooth scrolling
+      });
+    </script>
+    <!-- script for scrollspy-->
+
+    <script>
+      $(document).ready(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+
+      $("#myModal").on("shown.bs.modal", function () {
+        $("#myInput").trigger("focus");
+      });
+    </script>
+    <!-- font awesome icons-->
+  </body>
+</html>

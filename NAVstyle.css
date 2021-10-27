@@ -1,0 +1,221 @@
+/*
+  Student:      Misko Valent
+  Assignment:   2C - Part One - Animation
+  Due Date:     Oct 26, 2021
+
+  Filename:     style.css
+  LastUpdated:  Oct 26, 2021
+  
+  Class:        DGL 203 - Advanced CSS
+  Instructor:   Megan Wilson
+  Semester:     NIC 2021 Fall
+  */
+
+/*##############  Assignment 2C - Part 01 - Styles  ###############*/
+
+:root {
+    --fontX: 0;
+    --fontS: 1;
+    --fontW: 300;
+    --dur: 2s;
+    --delay: 0s;
+    --ease: linear;
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  justify-content: center;
+  background-color: green;
+  /* using background for visual cues during setup, option to delete or alter upon completion */
+}
+
+.partOneTitle {
+  font-weight: 900;
+}
+
+.fontA {
+  animation: fontVars var(--dur) var(--ease) both infinite;
+  /* animation: fontVars 3s infinite ease-out; */
+}
+
+.lineA {
+  --fontX: -40px;
+  --fontS: 1.6;
+  --fontW: 900;
+  --dur: 3.5s;
+  --ease: ease-out;
+}
+
+.fontB {
+  animation: fontVars var(--dur) var(--ease) both infinite;
+  /* animation: fontVars 2s infinite ease-in;  */
+}
+
+.lineB {
+  --fontX: 60px;
+  --fontS: 1.4;
+  --fontW: 900;
+  --dur: 2.5s;
+  --ease: ease-in;
+}
+
+
+.w3-container {
+  margin: auto;
+  background-color: lightgreen;
+  width: 90%;
+}
+
+.course #ball {
+  /* transform-origin: bottom; */
+  transform-box: fill-box;
+  offset-path: path(
+    "M1 1c154.05 20.43 278.39 93.92 335 237 102-50.66 182.73-49.35 275 8 46.77-32.45 86.36-24.11 114 0 66.29-35.12 98.23-18.66 90 32"
+  );
+  animation: fly 2.5s linear both;
+}
+
+#cup {
+  /* width: 20px;
+  height: 20px; */
+  /* offset-position: left; */
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: spin 1.5s linear both infinite;
+}
+
+#_18th_hole {
+  transform-origin: bottom;
+  transform-box: fill-box;
+  animation: pickup 0.3s ease-out 1.5s both;
+}
+
+/*##############  Animations  ###############*/
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pickup {
+  0% {
+    transform: translateY(0) rotateZ(0) translateX(0) scale(90%);
+  }
+  100% {
+    transform: translateY(-100px) rotateZ(-15deg) translateX(5px) scale(80%);
+  }
+}
+
+@keyframes fly {
+  0% {
+    offset-distance: 0%;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+@keyframes fontVars {
+  0%,
+  100% {
+    transform: scale(1) translateX(0);
+    font-weight: 300;
+  }
+  50% {
+    transform: translateX(var(--fontX)) scale(var(--fontS));
+    font-weight: (var(--fontW));
+  }
+}
+
+
+/********************  CODE PEN styles  **************************/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.w3-container {
+  margin: auto;
+  background-color: black;
+  width: 100%;
+}
+
+.flex-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.navigation {
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.navigation a {
+  text-decoration: none;
+  letter-spacing: 0.45rem;
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation a {
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.navigation a:hover {
+  background: grey;
+}
+
+/* *********** media queries *********** */
+@media all and (max-width: 990px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .navigation {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+/* ****** ****** */
+@media all and (max-width: 600px) {
+  .logo {
+    margin: 0.25em 0;
+    align-self: left; /* align the logo to the left side of 'flex-container' */
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+

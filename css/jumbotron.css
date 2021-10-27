@@ -1,0 +1,10 @@
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+
+.jumbotron {
+  background-image: url(../images/stock/dancers.jpg);
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+  background-size: cover;
+
+  /* padding-bottom: 3.5rem; */
+}
